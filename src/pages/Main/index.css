@@ -1,0 +1,137 @@
+.home {
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.home-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  max-width: 90vw;
+  margin: auto auto;
+  margin-bottom: 20px;
+  font-size: 50px;
+  color: #41FF00;
+  font-weight: 700;
+  letter-spacing: -1px;
+  font-family: 'Roboto Mono';
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; 
+}
+
+.social {
+  margin-left: 0; 
+  padding-left: 0;
+  list-style-type: none;
+
+  margin: auto;
+}
+
+.social li {
+  float: left;
+}
+
+a {
+  border: 0;
+  outline: 0;
+  color: inherit;
+  text-decoration: inherit;
+  margin: 0 16px;
+}
+
+.social li a svg {
+  transition-property: color filter;
+  transition-duration: 1s;
+}
+
+.social li a:hover svg {
+  color: grey !important;
+}
+
+h1 span.cursor {
+  animation: blink 0.7s infinite;
+  position: relative;
+  margin-left: -10px;
+  font-size: 50px;
+}
+
+@keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+
+@media screen and (max-width: 1200px) {
+  h1 {
+    max-width: 90vw;
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  h1 {
+    font-size: 32px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  h1 {
+    /* max-width: 90vw; */
+    font-size: 24px;
+  }
+
+  h1 span.cursor {
+    font-size: 24px;
+    margin-left: -8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  
+  h1 {
+    max-width: 72vw;
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+}
+
+/* iphone x e galaxy s5 */
+@media screen and (max-width: 375px) {
+  h1 {
+    max-width: 70vw;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  
+  h1 {
+    max-width: 78vw;
+  }
+  
+}

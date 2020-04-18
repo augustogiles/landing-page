@@ -1,17 +1,30 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import ReactDOM from 'react-dom';
+
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import Main from './pages/Main'
+import Loading from './components/Loading';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const App = () => {
+  const [load, setLoad] = useState(false);
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+  const cleanUpIntervalAndLoad = (id) => {
+    setLoad(false)
+    clearInterval(id);
+  }
+
+  async function delay() {
+    return setTimeout(() => setLoad(true), 400);
+  }
+
+  useEffect(() => {
+    let id = delay();
+    return cleanUpIntervalAndLoad(id);
+  }, []);
+
+  return !load ?  
+      (<Loading show={!load} />)
+      : <Main/>
+}
+
+ReactDOM.render(<App />, document.getElementById('root'))
