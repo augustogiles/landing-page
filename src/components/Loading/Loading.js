@@ -2,7 +2,6 @@ import React from 'react';
 import './index.css';
 
 function Loading( {show = true} ) {
-  console.log(show);
   const LoadingAnimation = (
     <div id="preloader">
       <div className="spinner">
