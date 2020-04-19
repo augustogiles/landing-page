@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    name: Build and Deploy to Firebase Hosting
+    name: Build and Deploy to https://augustogiles.github.io/landing-page/
     runs-on: ubuntu-latest
     
     steps:
