@@ -2,9 +2,8 @@ import React from 'react';
 import { FaXing, FaLinkedinIn, FaGithub, FaFileDownload } from 'react-icons/fa';
 
 import useType from '../../hooks/useType';
-
 import data from '../../config/data';
-import file from '../../assets/resume.pdf';
+
 import './index.css';
 
 const Main = () => {
