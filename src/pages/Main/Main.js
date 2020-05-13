@@ -8,7 +8,7 @@ import file from '../../assets/resume.pdf';
 import './index.css';
 
 const Main = () => {
-  const { linkedin, xing, github } = data.social;
+  const { linkedin, xing, github, drive } = data.social;
   const strings = ['Hi!', "I'm Augusto,", 'Software Developer'];
 
   const text = useType(strings);
@@ -38,7 +38,7 @@ const Main = () => {
               </a>
             </li>
             <li>
-              <a href={file} download>
+              <a href={drive} target="_blank" rel="noopener noreferrer">
                 <FaFileDownload size={16} color="white" />
               </a>
             </li>
