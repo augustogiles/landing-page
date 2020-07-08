@@ -1,5 +1,7 @@
 import React from 'react';
 import { FaXing, FaLinkedinIn, FaGithub, FaFileDownload } from 'react-icons/fa';
+import psmi from '../../assets/psmi.png';
+import psmii from '../../assets/psmii.png';
 
 import useType from '../../hooks/useType';
 import data from '../../config/data';
@@ -7,8 +9,8 @@ import data from '../../config/data';
 import './index.css';
 
 const Main = () => {
-  const { linkedin, xing, github, drive } = data.social;
-  const strings = ['Hi!', "I'm Augusto,", 'Software Developer'];
+  const { linkedin, xing, github, drive, scrumOrg } = data.social;
+  const strings = ['Hi!', "I'm Augusto,", 'a Scrum Master'];
 
   const text = useType(strings);
 
@@ -39,6 +41,18 @@ const Main = () => {
             <li>
               <a href={drive} target="_blank" rel="noopener noreferrer">
                 <FaFileDownload size={16} color="white" />
+              </a>
+            </li>
+          </ul>
+          <ul className="badges">
+            <li>
+              <a href={scrumOrg} target="_blank" rel="noopener noreferrer">
+                <img src={psmi} alt="PSM I" className="psmi" />
+              </a>
+            </li>
+            <li>
+              <a href={scrumOrg} target="_blank" rel="noopener noreferrer">
+                <img src={psmii} alt="PSM II" className="psmii" />
               </a>
             </li>
           </ul>
